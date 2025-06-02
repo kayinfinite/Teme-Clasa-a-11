@@ -63,6 +63,15 @@ void AfisareMatrice(unsigned Mat[10][10], unsigned n){
     }
 }
 
+void AfisareGrad(unsigned Mat[10][10], unsigned n){
+    int i, Grad = 0;
+    cout << "Introduce nodul: "; cin >> i;
+    for(int j = 0; j<n; j++)
+        if(Mat[i - 1][j] == 1)
+            Grad++;
+    cout << "Gradul nodului " << i << " este: " << Grad;
+}
+
 int main(){
     unsigned int mod;
     cout<<"Numarul de elemente: "; cin>>n; cout << n;
@@ -80,16 +89,17 @@ int main(){
         AfisareMatrice(Mat, n);
         break;
     case 3:
-
+        CitesteFisier(Mat, n);
+        AfisareGrad(Mat, n);
         break;
     case 4:
-
+        CitesteFisier(Mat, n);
         break;
     case 5:
-
+        CitesteFisier(Mat, n);
         break;
     case 6:
-
+        CitesteFisier(Mat, n);
         break;
     default:
         break;
