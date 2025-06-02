@@ -16,14 +16,14 @@ void CitesteTast(unsigned n, unsigned Mat[10][10]){
         {
             if(orientat){ //citire pentru graf orientat
                 if(j != i){
-                cout << "Nodul " << i <<" e conectat cu nodul " << j << ": ";
+                cout << "Nodul " << i+1 <<" e conectat cu nodul " << j+1 << ": ";
                 cin >> Mat[i][j];  
                 }else{ //diagonala principala va fi mereu 0
                 Mat[i][j] = 0;
                 }
             }else{
                 if(j > i){ //citire pentru graf neorientat
-                    cout << "Nodul " << i <<" e conectat cu nodul " << j << ": ";
+                    cout << "Nodul " << i+1 <<" e conectat cu nodul " << j+1 << ": ";
                     cin >> Mat[i][j];
                     Mat[j][i] = Mat[i][j];   
                 } 
@@ -81,8 +81,7 @@ int main(){
     {
     case 1:
         CitesteTast(n, Mat);
-        Scriere(3, Mat);
-        //cout << "test";
+        Scriere(n, Mat);
         break;
     case 2:
         CitesteFisier(Mat, n);
@@ -93,15 +92,16 @@ int main(){
         AfisareGrad(Mat, n);
         break;
     case 4:
-        CitesteFisier(Mat, n);
+        CitesteFisier(Mat, n); //De facut maine
         break;
     case 5:
-        CitesteFisier(Mat, n);
+        CitesteFisier(Mat, n); //De facut maine
         break;
     case 6:
-        CitesteFisier(Mat, n);
+        CitesteFisier(Mat, n); //De facut maine
         break;
     default:
+        cout<<"Program inexistent";
         break;
     }
 
